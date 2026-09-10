@@ -1,0 +1,24 @@
+# Repository-level CLI/env contract for governance tooling.
+# This repository is a static publication surface, not an application CLI. The
+# command below is the repository-owned validation entrypoint.
+
+[help]
+url = "https://github.com/ores-wasm-loaders/ores-wasm-loaders.github.io"
+columns = ["options", "env", "type", "default", "description"]
+
+[env]
+files = []
+
+[parse]
+command_env = "ORES_WASM_LOADERS_SITE_GOVERNANCE_COMMAND"
+unknown_options_env = "ORES_WASM_LOADERS_SITE_UNKNOWN_OPTIONS"
+errors_env = "ORES_WASM_LOADERS_SITE_PARSE_ERRORS"
+allow_unknown = false
+
+[commands.env-contract]
+help = "Validate the repository CLI/environment inventory and fail closed on drift."
+env = "ORES_WASM_LOADERS_SITE_ENV_CONTRACT"
+
+# BEGIN flags2env env-manifest v1
+# schema=ores.env-manifest.v1 sha256=fdab1ef9d104d75ff7a406ddc5487a6595779b7ec0674b925f336cbac14afae7
+# END flags2env env-manifest v1
