@@ -1,0 +1,34 @@
+---
+const {title} = Astro.props;
+---
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>{title} · OWLS</title>
+<meta name="description" content="Shared WebAssembly preparation and runtime adapters for browser, Flutter and Rust applications."/>
+</head><body>
+<a class="skip" href="#content">Skip to content</a>
+<header><a class="brand" href="/">OWLS<span> / WASM LOADERS</span></a><nav aria-label="Main">
+<a href="/packages/">Packages</a><a href="/adopt/">Adopt</a><a href="/testing/">Testing</a>
+<a href="https://github.com/ores-wasm-loaders">GitHub ↗</a></nav></header>
+<main id="content"><slot/></main>
+<footer><strong>Shared code. Explicit runtime ownership.</strong><div><a href="/adopt/#user-app">User app integration</a><a href="/adopt/#org-app">Organization app integration</a></div><p>Product sign-in endpoints belong to each adopting organization.</p></footer>
+<style is:global>
+:root{font-family:system-ui,sans-serif;color:#dbe8f5;background:#071321;font-size:16px;line-height:1.6;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0}a{color:#70e1ef;text-underline-offset:.25em}a:hover{color:#fff}a:focus-visible{outline:3px solid #ffd166;outline-offset:5px}
+.skip{position:absolute;top:-100px}.skip:focus{top:0;background:#071321;padding:1rem;z-index:10}
+header{position:sticky;top:0;background:#071321f5;border-bottom:1px solid #274056;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.2rem max(5vw,1rem);z-index:5}
+.brand{font-weight:850;font-size:1.45rem;text-decoration:none;color:#fff;white-space:nowrap}.brand span{font-size:.8rem;letter-spacing:.12em;color:#87a7c5;margin-left:.6rem}
+nav{display:flex;gap:1.5rem;flex-wrap:wrap}nav a{font-size:.95rem;text-decoration:none}
+main{max-width:1160px;margin:auto;padding:5rem 2rem 6rem;min-height:65vh}
+h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.08;max-width:900px;letter-spacing:-.05em;margin:.3em 0}
+h2{font-size:1.65rem;line-height:1.25;margin-top:3rem}h3{font-size:1.15rem}p{max-width:780px}.lead{font-size:1.25rem;color:#b9cee1;max-width:780px}.eyebrow{font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:#70e1ef}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:1.2rem;margin-top:2.5rem}
+.panel{background:#102338;border:1px solid #294863;padding:1.6rem;border-radius:8px}.panel h3{margin:0 0 .8rem}.panel p{color:#b9cee1}
+.flow{display:flex;gap:.8rem;flex-wrap:wrap;padding:1.5rem 0}.flow span{border-top:3px solid #70e1ef;background:#102338;padding:1rem 1.4rem;flex:1;min-width:160px}
+.button{display:inline-block;margin:1rem 1rem 0 0;padding:.75rem 1.2rem;background:#70e1ef;color:#071321;border-radius:4px;text-decoration:none;font-weight:700}.button:hover{background:#a6f2ff;color:#071321}
+code{font-family:ui-monospace,monospace;font-size:.9em}pre{overflow:auto;background:#102338;border-left:3px solid #70e1ef;padding:1.4rem;max-width:100%}
+table{border-collapse:collapse;width:100%;font-size:.95rem}td,th{text-align:left;padding:.9rem;border-bottom:1px solid #294863}th{color:#70e1ef}
+footer{border-top:1px solid #274056;padding:2rem max(5vw,1rem);color:#a2bdd4}footer div{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:1rem}footer p{font-size:.9rem}
+@media(max-width:640px){header{align-items:flex-start;flex-direction:column;gap:.6rem}nav{gap:1rem}main{padding:3rem 1.2rem}h1{letter-spacing:-.035em}table{font-size:.85rem}td,th{padding:.6rem .35rem}}
+</style>
+</body></html>
