@@ -13,4 +13,4 @@ adapter = "none"
 dir = "."
 [publish]
 include_readme = true
-exclude = ["node_modules/**", "dist/**", ".astro/**", ".ores/**", ".zed/**"]
+exclude = ["node_modules/**", "dist/**", ".astro/**", ".ores/**", ".zed/**", ".tools/**", "tmp/**", "temp/**", "test-results/**", "playwright-report/**"]

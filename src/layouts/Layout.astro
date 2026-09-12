@@ -10,7 +10,7 @@ const {title} = Astro.props;
 <header><a class="brand" href="/">OWLS<span> / WASM LOADERS</span></a><nav aria-label="Main">
 <a href="/packages/">Packages</a><a href="/adopt/">Adopt</a><a href="/testing/">Testing</a>
 <a href="https://github.com/ores-wasm-loaders">GitHub ↗</a></nav></header>
-<main id="content"><slot/></main>
+<main id="content" tabindex="-1"><slot/></main>
 <footer><strong>Shared code. Explicit runtime ownership.</strong><div><a href="/adopt/#user-app">User app integration</a><a href="/adopt/#org-app">Organization app integration</a></div><p>Product sign-in endpoints belong to each adopting organization.</p></footer>
 <style is:global>
 :root{font-family:system-ui,sans-serif;color:#dbe8f5;background:#071321;font-size:16px;line-height:1.6;color-scheme:dark}

@@ -26,6 +26,11 @@ jobs:
           fetch-depth: 0
           show-progress: false
 
+      - name: Verify candidate checkout identity
+        env:
+          EXPECTED_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
+
       - name: Set up Node
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with:
@@ -42,6 +47,12 @@ jobs:
 
       - name: Build production Astro site
         run: npm run build
+
+      - name: Install pinned Chromium and system dependencies
+        run: npx --no-install playwright install --with-deps chromium
+
+      - name: Exercise built pages in narrow and desktop browsers
+        run: npm test
 
       - name: Verify generated site contract
         shell: bash
@@ -83,7 +94,7 @@ jobs:
           import { readFileSync } from 'node:fs';
           const receipt = JSON.parse(readFileSync(process.argv[2], 'utf8'))[0];
           const files = receipt.files.map((item) => item.path);
-          for (const forbidden of ['node_modules/', 'dist/', '.astro/', '.git/']) {
+          for (const forbidden of ['node_modules/', 'dist/', '.astro/', '.git/', '.tools/', 'tmp/', 'temp/', 'test-results/', 'playwright-report/']) {
             if (files.some((path) => path.startsWith(forbidden))) {
               throw new Error(`forbidden packed path: ${forbidden}`);
             }

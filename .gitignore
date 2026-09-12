@@ -6,3 +6,8 @@ dist/
 zed_modules/
 .env
 .env.*
+tmp/
+temp/
+test-results/
+playwright-report/
+.tools/

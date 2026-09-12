@@ -20,7 +20,12 @@ jobs:
       - name: Check out exact revision
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
+      - name: Verify candidate checkout identity
+        env:
+          EXPECTED_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
       - name: Check out exact canonical flags-2-env source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:

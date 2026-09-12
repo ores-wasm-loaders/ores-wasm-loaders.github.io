@@ -2,4 +2,4 @@ schema = 2
 [tasks.deps]
 run = ["zed install --frozen --adapter none", "npm ci"]
 [tasks.check]
-run = ["zed validate --require-lock", "npm run build"]
+run = ["zed validate --require-lock", "npm run build", "npm test"]
