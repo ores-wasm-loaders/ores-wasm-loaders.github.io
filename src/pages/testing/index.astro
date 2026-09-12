@@ -1,0 +1,16 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+<Layout title="Testing"><p class="eyebrow">Evidence and limits</p><h1>Test the real boundary.</h1>
+<p class="lead">The external suite installs published artifacts and exercises actual Flutter Wasm and generated Rust glue in Chromium.</p>
+<table><thead><tr><th>Surface</th><th>Acceptance</th></tr></thead><tbody>
+<tr><td>Browser</td><td>Byte-only preparation, single activation, SHA-256, budgets, cancellation and deadlines.</td></tr>
+<tr><td>Flutter Web</td><td>Generated Wasm build; dormant preparation; one engine with two embedded views.</td></tr>
+<tr><td>Rust browser</td><td>Generated wasm-bindgen glue; native exports and one initialization.</td></tr>
+<tr><td>Rust native</td><td>Real WASM execution, fuel exhaustion and memory limits.</td></tr>
+<tr><td>Cross-runtime contracts</td><td>One accepted/rejected manifest corpus across TypeScript, Dart and Rust.</td></tr>
+<tr><td>Navigation</td><td>Persistent CacheStorage bytes and explicit WebView completion messages.</td></tr>
+</tbody></table>
+<h2>Platform qualification</h2><p>Device-level Android, iOS and desktop WebView testing remains product-specific. Chromium coverage does not imply every browser or native plugin engine is certified. See the repository’s validation record for exact versions and current CI results.</p>
+<a class="button" href="https://github.com/ores-wasm-loaders-test/owls-e2e">Open the external suite ↗</a>
+</Layout>

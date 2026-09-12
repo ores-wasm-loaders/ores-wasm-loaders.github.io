@@ -1,0 +1,16 @@
+[package]
+org = "ores-wasm-loaders"
+name = "owls-site"
+version = "0.1.0"
+description = "Astro organization gateway"
+license = "MIT"
+[package.repository]
+vcs = "git"
+url = "https://github.com/ores-wasm-loaders/ores-wasm-loaders.github.io"
+[install]
+adapter = "none"
+[targets.repository]
+dir = "."
+[publish]
+include_readme = true
+exclude = ["node_modules/**", "dist/**", ".astro/**", ".ores/**", ".zed/**"]
