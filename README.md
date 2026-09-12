@@ -47,3 +47,16 @@ Tracking: [site issue #1](https://github.com/ores-wasm-loaders/ores-wasm-loaders
 and the [OWLS Linear project](https://linear.app/denman/project/ores-wasm-loaders-017f721fe577).
 The site draft from PR #4 is retained in merge history alongside the current
 governance and unchanged MIT terms.
+
+## GitHub Pages publication
+
+Pages must use **GitHub Actions** as its publishing source. The legacy branch
+builder invokes Jekyll, which cannot compile Astro source. The Pages workflow
+builds and tests the exact candidate before uploading only `dist/`. PRs exercise
+the artifact build; deployment is limited to `main` and uses the existing
+`github-pages` environment. Read-only build jobs do not receive Pages write or
+OIDC permissions.
+
+After a merge, verify the deployment run's source SHA and the served four routes
+separately from the source checks. Custom domains and application sign-in
+endpoints remain outside this library site's publication configuration.
