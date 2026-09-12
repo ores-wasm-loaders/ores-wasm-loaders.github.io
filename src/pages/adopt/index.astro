@@ -1,0 +1,10 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+<Layout title="Adopt"><p class="eyebrow">Product integration</p><h1>Own the policy.<br/>Share the mechanics.</h1>
+<p class="lead">Select a verified, pinned package release, publish a manifest from your actual build output, then provide your runtime’s activation hook.</p>
+<ol><li>Use the <a href="https://github.com/ores-wasm-loaders/owls-docs/blob/main/docs/installation.md">installation guide</a> to understand the Zed manifests and preview file-registry workflow. Verify that your selected artifact source is accessible and matches its recorded digest before installation. A prior isolated registry test does not establish current public registry availability.</li><li>Keep Flutter build configuration and Rust generated glue with the matching immutable release.</li><li>Replace transport, storage, telemetry or lifecycle hooks through public interfaces. Keep integrity and release checks enabled.</li><li>Measure cold entry, prepared entry and persistent-shell activation in your product.</li></ol>
+<h2 id="user-app">User applications</h2><p>The adopting organization supplies its own user application and sign-in URL. Prepare public assets on intent, and activate after the user enters the app. No login endpoint is configured for this shared-library organization.</p>
+<h2 id="org-app">Organization applications</h2><p>Use the organization’s own runtime configuration and authentication boundary. Keep organization and admin surfaces isolated from public marketing pages. Custom-domain routing awaits an owned apex domain.</p>
+<h2>Runtime reuse has a scope</h2><p>A retained document can retain its runtime. Full navigation creates a new document. Native file caches, WebView caches and cross-site HTTP caches are separate facilities; reuse must be verified for the actual deployment.</p>
+</Layout>

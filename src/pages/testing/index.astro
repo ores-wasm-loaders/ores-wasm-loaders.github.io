@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+<Layout title="Testing"><p class="eyebrow">Evidence and limits</p><h1>Test the real boundary.</h1>
+<p class="lead">Use evidence tied to the exact package versions and component commits you plan to consume. Contract admission, browser behavior and production qualification each have their own checks.</p>
+<table><caption>Acceptance boundaries to verify for a selected release</caption><thead><tr><th scope="col">Surface</th><th scope="col">Acceptance</th></tr></thead><tbody>
+<tr><td>Browser</td><td>Byte-only preparation, single activation, SHA-256, budgets, cancellation and deadlines.</td></tr>
+<tr><td>Flutter Web</td><td>Generated Wasm build; dormant preparation; one engine with two embedded views.</td></tr>
+<tr><td>Rust browser</td><td>Generated wasm-bindgen glue; native exports and one initialization.</td></tr>
+<tr><td>Rust native</td><td>Real WASM execution, fuel exhaustion and memory limits.</td></tr>
+<tr><td>Cross-runtime contracts</td><td>Independent TypeSpec and Draft 2020-12 parity through TJSV, verified receipts, five-language projections and host-specific manifest verdicts.</td></tr>
+<tr><td>Navigation</td><td>Persistent CacheStorage bytes and explicit WebView completion messages.</td></tr>
+</tbody></table>
+<h2>Recorded browser evidence</h2><p>The <a href="https://github.com/ores-wasm-loaders-test/owls-e2e/actions/runs/34059506334">September 6 browser pilot run</a> passed at test commit <code>1136a370</code>. That result is historical evidence for its recorded component set. Newer source commits require their own admission and consumer checks.</p>
+<p>Read the <a href="https://github.com/ores-wasm-loaders/owls-docs/blob/main/docs/validation.md">validation record</a> and <a href="https://github.com/ores-wasm-loaders-test/owls-e2e/actions">external suite runs</a> together. Missing, skipped or stale evidence does not certify a release. Public registry publication and portable package locks remain separate from isolated installation evidence.</p>
+<h2>Platform qualification</h2><p>Device-level Android, iOS and desktop WebView testing remains product-specific. Chromium coverage does not imply every browser or native plugin engine is certified. Production-origin behavior, field performance and rollback also require deployment evidence.</p>
+<a class="button" href="https://github.com/ores-wasm-loaders-test/owls-e2e">Open the external suite ↗</a>
+</Layout>

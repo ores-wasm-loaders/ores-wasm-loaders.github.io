@@ -1,0 +1,16 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const packages=[
+["owls-interfaces","Independent TypeSpec and JSON Schema authorities, with TypeScript, Dart, Rust, Go and Gleam projections."],
+["owls-web-loader","Browser preparation, caching, hints, SSR headers and framework adapters."],
+["owls-flutter","Flutter host policies, native bytes and explicit WebView integration."],
+["owls-runtime.rs","Rust native hosting, bounded Wasmi execution and build inspection."]
+];
+---
+<Layout title="Packages"><p class="eyebrow">Choose by runtime</p><h1>Four shared packages.</h1><p class="lead">Adopt the host you need. Keep each application’s generated framework glue with its matching immutable release.</p>
+<div class="grid">{packages.map(([name,description])=><article class="panel"><h3><a href={`https://github.com/ores-wasm-loaders/${name}`}>{name} ↗</a></h3><p>{description}</p></article>)}</div>
+<h2 id="contracts">Independent contract authorities</h2>
+<p>The human-maintained <a href="https://github.com/ores-wasm-loaders/owls-interfaces/blob/main/contracts/main.tsp">TypeSpec source</a> and <a href="https://github.com/ores-wasm-loaders/owls-interfaces/blob/main/schemas/release.schema.json">JSON Schema Draft 2020-12</a> are independent peers. Neither overwrites or outranks the other.</p>
+<p><a href="https://github.com/ORESoftware/typespec-json-schema-validator">typespec-json-schema-validator (TJSV)</a> checks parity before cross-runtime admission. Generated comparison schemas, Contract IR, language projections and receipts are evidence, never another authored authority. A mismatch or stale receipt stops admission. Read the <a href="https://github.com/ores-wasm-loaders/owls-docs/blob/main/docs/contract-admission.md">admission and projection checks</a>.</p>
+<h2>One external test repository</h2><p><a href="https://github.com/ores-wasm-loaders-test/owls-e2e">owls-e2e</a> checks external consumers, exact component revisions and real framework fixtures. Its package-installation and source-admission lanes provide separate evidence; review the <a href="/testing/">tested revisions and remaining gates</a> for your selected release.</p>
+</Layout>
