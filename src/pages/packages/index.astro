@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const packages=[
+["owls-interfaces","JSON Schema and TypeScript, Dart and Rust release types."],
+["owls-web-loader","Browser preparation, caching, hints, SSR headers and framework adapters."],
+["owls-flutter","Flutter host policies, native bytes and explicit WebView integration."],
+["owls-runtime.rs","Rust native hosting, bounded Wasmi execution and build inspection."]
+];
+---
+<Layout title="Packages"><p class="eyebrow">Choose by runtime</p><h1>Four shared packages.</h1><p class="lead">Adopt the host you need. Each package preserves the application’s generated runtime contract.</p>
+<div class="grid">{packages.map(([name,description])=><article class="panel"><h3><a href={`https://github.com/ores-wasm-loaders/${name}`}>{name} ↗</a></h3><p>{description}</p></article>)}</div>
+<h2>One external test repository</h2><p><a href="https://github.com/ores-wasm-loaders-test/owls-e2e">owls-e2e</a> resolves published packages through zed-pkg and checks independent product consumers.</p>
+</Layout>
